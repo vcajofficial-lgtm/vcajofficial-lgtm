@@ -1,0 +1,1072 @@
+/* =====================================================
+   VCAJ CASHIER / ACCOUNTS
+   Tournament Financial Management
+===================================================== */
+
+:root {
+    --navy: #073b78;
+    --navy-dark: #062f61;
+    --blue: #1674d1;
+    --blue-light: #eaf4ff;
+
+    --gold: #d29b18;
+    --gold-light: #fff6dc;
+
+    --green: #24a36f;
+    --green-light: #e8f8f1;
+
+    --red: #e05252;
+    --red-light: #fff0f0;
+
+    --purple: #7657d8;
+    --purple-light: #f1edff;
+
+    --white: #ffffff;
+    --background: #f3f6fa;
+
+    --text: #182b40;
+    --muted: #718096;
+
+    --border: #dfe7ef;
+
+    --shadow: 0 8px 25px rgba(25, 55, 90, 0.06);
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    min-height: 100vh;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.accounts-layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.accounts-sidebar {
+    width: 275px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #07518f 0%,
+            #063e76 55%,
+            #052f60 100%
+        );
+
+    color: white;
+
+    box-shadow:
+        4px 0 20px rgba(5, 45, 85, 0.10);
+
+    overflow-y: auto;
+    z-index: 100;
+}
+
+
+/* =====================================================
+   SIDEBAR BRAND
+===================================================== */
+
+.sidebar-brand {
+    min-height: 112px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    padding: 17px 18px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.13);
+}
+
+.sidebar-brand a {
+    display: block;
+    flex-shrink: 0;
+}
+
+.sidebar-brand img {
+    width: 68px;
+    height: 68px;
+
+    object-fit: contain;
+}
+
+.sidebar-brand h1 {
+    color: white;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.sidebar-brand p {
+    margin-top: 6px;
+
+    color: rgba(255,255,255,0.90);
+
+    font-size: 8.5px;
+    line-height: 1.45;
+
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.accounts-nav {
+    padding: 17px 13px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.accounts-nav a {
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    padding: 0 16px;
+
+    border-radius: 11px;
+
+    color: rgba(255,255,255,0.94);
+
+    text-decoration: none;
+
+    font-size: 13.5px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.accounts-nav a:hover {
+    background: rgba(255,255,255,0.10);
+    transform: translateX(2px);
+}
+
+.accounts-nav a.active {
+    color: #162c43;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3c54e,
+            #d79d18
+        );
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,0.14);
+}
+
+.accounts-nav a span {
+    width: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   SIDEBAR FOOTER
+===================================================== */
+
+.sidebar-footer {
+    margin-top: auto;
+
+    min-height: 130px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding: 20px;
+
+    color: white;
+
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.accounts-main {
+    width: calc(100% - 275px);
+    margin-left: 275px;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   TOPBAR
+===================================================== */
+
+.accounts-topbar {
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 18px 28px;
+
+    background: rgba(255,255,255,0.98);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 50;
+}
+
+.page-label {
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.accounts-topbar h2 {
+    margin-top: 4px;
+
+    color: var(--navy);
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.accounts-topbar p {
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   TOP ACTIONS
+===================================================== */
+
+.top-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.back-button,
+.income-button,
+.expense-button {
+    min-height: 38px;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+
+    background: var(--blue-light);
+    color: var(--blue);
+
+    border: 1px solid #d6e8f8;
+}
+
+.income-button {
+    background: var(--green);
+    color: white;
+
+    border: 1px solid var(--green);
+}
+
+.expense-button {
+    background: var(--red);
+    color: white;
+
+    border: 1px solid var(--red);
+}
+
+.back-button:hover,
+.income-button:hover,
+.expense-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+
+/* =====================================================
+   TOURNAMENT SELECTOR
+===================================================== */
+
+.tournament-selector {
+    margin: 22px 24px 0;
+
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+    padding: 18px 22px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #ffffff,
+            #eef7ff
+        );
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+.tournament-selector span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.tournament-selector strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--navy);
+
+    font-size: 15px;
+}
+
+.tournament-meta {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.tournament-meta span:nth-child(2) {
+    color: var(--gold);
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   SUMMARY
+===================================================== */
+
+.accounts-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin: 17px 24px 0;
+}
+
+.account-card {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 17px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    box-shadow: var(--shadow);
+}
+
+.account-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.account-card small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.account-card strong {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--navy);
+
+    font-size: 21px;
+}
+
+
+/* Summary colors */
+
+.account-card.income {
+    background: #f6fcf9;
+}
+
+.account-card.income .account-icon {
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.account-card.expense {
+    background: #fff8f8;
+}
+
+.account-card.expense .account-icon {
+    background: var(--red-light);
+    color: var(--red);
+}
+
+.account-card.balance {
+    background: #f6faff;
+}
+
+.account-card.balance .account-icon {
+    background: var(--blue-light);
+    color: var(--blue);
+}
+
+.account-card.security {
+    background: #fffaf0;
+}
+
+.account-card.security .account-icon {
+    background: var(--gold-light);
+    color: var(--gold);
+}
+
+
+/* =====================================================
+   SECONDARY SUMMARY
+===================================================== */
+
+.secondary-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin: 14px 24px 0;
+}
+
+.mini-card {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+.mini-card > span {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--blue-light);
+
+    font-size: 16px;
+}
+
+.mini-card small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 8.5px;
+}
+
+.mini-card strong {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   ACCOUNT PANELS
+===================================================== */
+
+.account-panels {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 0.9fr;
+
+    gap: 17px;
+
+    margin: 17px 24px 0;
+}
+
+.panel {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    padding: 17px;
+
+    box-shadow: var(--shadow);
+
+    min-width: 0;
+}
+
+.panel-header {
+    min-height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.panel-header > div {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.panel-icon {
+    font-size: 17px;
+}
+
+.panel-header h3 {
+    color: var(--navy);
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.panel-header button {
+    border: none;
+    background: transparent;
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   EMPTY TRANSACTIONS
+===================================================== */
+
+.empty-transactions {
+    min-height: 225px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border-top: 1px solid #edf1f5;
+}
+
+.empty-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--blue-light);
+    color: var(--blue);
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.empty-transactions h4 {
+    margin-top: 12px;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+.empty-transactions p {
+    max-width: 300px;
+
+    margin-top: 5px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.category-list {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+}
+
+.category {
+    min-height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 9px;
+
+    border-radius: 9px;
+
+    border: 1px solid #edf1f5;
+
+    background: #fafcfe;
+}
+
+.category > span {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: var(--blue-light);
+
+    font-size: 14px;
+}
+
+.category strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 9.5px;
+}
+
+.category small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--muted);
+
+    font-size: 7.5px;
+}
+
+.security-category {
+    background: #fffaf0;
+    border-color: #f3e3b8;
+}
+
+.security-category > span {
+    background: var(--gold-light);
+}
+
+.expense-category > span {
+    background: var(--red-light);
+}
+
+
+/* =====================================================
+   SECURITY DEPOSIT
+===================================================== */
+
+.security-panel {
+    margin: 17px 24px 0;
+}
+
+.security-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+}
+
+.security-info > div {
+    padding: 14px;
+
+    border-radius: 10px;
+
+    background: #fafcfe;
+
+    border: 1px solid #edf1f5;
+}
+
+.security-info strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 18px;
+}
+
+.security-info small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   SECURITY TABLE
+===================================================== */
+
+.security-table {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+}
+
+.table-header {
+    min-height: 38px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr 1fr 1fr;
+
+    align-items: center;
+
+    padding: 0 12px;
+
+    background: #f5f8fb;
+
+    color: var(--muted);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.no-data {
+    min-height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.accounts-footer {
+    margin: 20px 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+
+    .accounts-sidebar {
+        width: 245px;
+    }
+
+    .accounts-main {
+        width: calc(100% - 245px);
+        margin-left: 245px;
+    }
+
+    .accounts-summary {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .secondary-summary {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .account-panels {
+        grid-template-columns: 1fr;
+    }
+
+    .security-info {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .accounts-sidebar {
+        position: relative;
+
+        width: 210px;
+    }
+
+    .accounts-main {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+    }
+
+    .accounts-topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .top-actions {
+        flex-wrap: wrap;
+    }
+
+    .tournament-selector {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .accounts-sidebar {
+        display: none;
+    }
+
+    .accounts-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .accounts-topbar {
+        padding: 16px;
+    }
+
+    .accounts-topbar h2 {
+        font-size: 21px;
+    }
+
+    .top-actions {
+        width: 100%;
+    }
+
+    .back-button,
+    .income-button,
+    .expense-button {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .tournament-selector,
+    .accounts-summary,
+    .secondary-summary,
+    .account-panels,
+    .security-panel {
+        margin-left: 13px;
+        margin-right: 13px;
+    }
+
+    .accounts-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .secondary-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+
+    .security-info {
+        grid-template-columns: 1fr;
+    }
+
+    .table-header {
+        grid-template-columns:
+            1.2fr 1fr 1fr 1fr;
+
+        min-width: 450px;
+    }
+
+    .security-table {
+        overflow-x: auto;
+    }
+
+    .no-data {
+        min-width: 450px;
+    }
+
+    .accounts-footer {
+        margin-left: 13px;
+        margin-right: 13px;
+
+        flex-direction: column;
+        gap: 6px;
+    }
+
+}

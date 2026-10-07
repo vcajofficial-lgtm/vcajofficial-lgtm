@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VCAJ | Official Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+    <a href="index.html">
+        <img
+            src="assets/logo/images/VCAJ.png"
+            alt="VCAJ Logo"
+        >
+    </a>
+
+    <div class="brand-text">
+                    <h1>VCAJ</h1>
+
+                    <p>
+                        VIVEKANANDA CRICKET<br>
+                        ASSOCIATION OF JELIAKHALI
+                    </p>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▥</span>
+                    <span>Live Scoring</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🏆</span>
+                    <span>Tournament</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    <span>Teams & Players</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▣</span>
+                    <span>Fixtures & Results</span>
+                </a>
+
+                <a href="cashier.html" class="nav-item">
+                <span class="nav-icon">▤</span>
+                <span>Cashier / Accounts</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">♟</span>
+                    <span>Members</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">🤝</span>
+                    <span>Sponsors</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▧</span>
+                    <span>Media / Gallery</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    <span>Reports</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">📢</span>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-footer">
+                <div class="footer-cricket-icon">🏏</div>
+                <span>Cricket Unites Us</span>
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN AREA
+        ================================================== -->
+
+        <main class="main-area">
+
+
+            <!-- =================================================
+                 TOP BAR
+            ================================================== -->
+
+            <header class="topbar">
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="search"
+                        placeholder="Search players, teams, matches, members, sponsors..."
+                    >
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- TIME -->
+                    <div class="top-date-time">
+
+                        <div class="top-time">
+                            <span class="time-icon">◷</span>
+
+                            <div>
+                                <strong id="currentTime">
+                                    00:00:00 AM
+                                </strong>
+
+                                <small>Current Time</small>
+                            </div>
+                        </div>
+
+
+                        <div class="top-date">
+
+                            <div>
+                                <strong id="currentDate">
+                                    30 September 2026
+                                </strong>
+
+                                <small id="currentDay">
+                                    Wednesday
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTIFICATION -->
+
+                    <button
+                        class="notification-button"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+                        🔔
+                        <span>3</span>
+                    </button>
+
+
+                    <!-- USER -->
+
+                    <div class="user-profile" id="userProfile">
+
+    <div class="user-avatar">
+        A
+    </div>
+
+    <div class="user-details">
+        <strong>Admin</strong>
+        <small>Super Admin</small>
+    </div>
+
+    <span class="profile-arrow">
+        ⌄
+    </span>
+
+    <div class="profile-dropdown" id="profileDropdown">
+
+    <button type="button" id="logoutButton">
+        🚪 Logout
+    </button>
+
+</div>
+
+</div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+            ================================================== -->
+
+            <section class="dashboard-content">
+
+
+                <!-- =================================================
+                     WELCOME HERO
+                ================================================== -->
+
+                <section class="welcome-section">
+
+
+                    <div class="welcome-content">
+
+                        <span class="welcome-label">
+                            OFFICIAL MANAGEMENT SYSTEM
+                        </span>
+
+                        <h2>
+                            Welcome Back,
+                            <strong>Admin</strong>
+                            👋
+                        </h2>
+
+                        <p>
+                            Manage, Monitor and Grow VCAJ Cricket Activities
+                            Together for a Stronger Cricket Community.
+                        </p>
+
+                    </div>
+
+
+                    <div class="hero-status">
+
+                        <span>
+                            VCAJ • JELIAKHALI
+                        </span>
+
+                        <strong>
+                            PLAY • UNITE • GROW
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     SUMMARY CARDS
+                ================================================== -->
+
+                <section class="stats-grid">
+
+
+                    <div class="stat-card stat-blue">
+
+                        <div class="stat-icon">
+                            👥
+                        </div>
+
+                        <div class="stat-content">
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <span>
+                                Teams Registered
+                            </span>
+
+                            <small>
+                                ↑ 2 this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card stat-gold">
+
+                        <div class="stat-icon">
+                            ♙
+                        </div>
+
+                        <div class="stat-content">
+
+                            <strong>
+                                178
+                            </strong>
+
+                            <span>
+                                Total Players
+                            </span>
+
+                            <small>
+                                ↑ 12 this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card stat-green">
+
+                        <div class="stat-icon">
+                            🏆
+                        </div>
+
+                        <div class="stat-content">
+
+                            <strong>
+                                3
+                            </strong>
+
+                            <span>
+                                Tournaments
+                            </span>
+
+                            <small>
+                                — No change
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card stat-red">
+
+                        <div class="stat-icon">
+                            📅
+                        </div>
+
+                        <div class="stat-content">
+
+                            <strong>
+                                28
+                            </strong>
+
+                            <span>
+                                Matches Played
+                            </span>
+
+                            <small>
+                                ↑ 6 this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card stat-purple">
+
+                        <div class="stat-icon">
+                            👤
+                        </div>
+
+                        <div class="stat-content">
+
+                            <strong>
+                                80
+                            </strong>
+
+                            <span>
+                                Members
+                            </span>
+
+                            <small>
+                                ↑ 5 this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card stat-finance">
+
+                        <div class="stat-icon">
+                            ₹
+                        </div>
+
+                        <div class="stat-content">
+
+                            <strong>
+                                ₹1,25,000
+                            </strong>
+
+                            <span>
+                                Cash in Hand
+                            </span>
+
+                            <small>
+                                Updated today
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     NEXT MATCH + RECENT ACTIVITY
+                ================================================== -->
+
+                <section class="main-panels">
+
+
+                    <!-- NEXT MATCH -->
+
+                    <div class="panel next-match-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    🔴
+                                </span>
+
+                                <h3>
+                                    Next Match
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View All Fixtures →
+                            </a>
+
+                        </div>
+
+
+                        <div class="next-match-content">
+
+
+                            <div class="match-date-large">
+
+                                <strong>
+                                    25
+                                </strong>
+
+                                <span>
+                                    DEC
+                                </span>
+
+                                <small>
+                                    2026
+                                </small>
+
+                                <div class="match-meta">
+
+                                    <span>
+                                        ◷ 03:00 PM
+                                    </span>
+
+                                    <span>
+                                        📍 VCAJ Ground
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="match-versus">
+
+
+                                <div class="tournament-name">
+                                    Mondal & Mondal Cricket Tournament
+                                </div>
+
+
+                                <div class="teams-versus">
+
+                                    <div class="team">
+
+                                        <div class="team-logo">
+                                            XI
+                                        </div>
+
+                                        <strong>
+                                            Team A
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="versus">
+                                        VS
+                                    </div>
+
+
+                                    <div class="team">
+
+                                        <div class="team-logo">
+                                            XI
+                                        </div>
+
+                                        <strong>
+                                            Team B
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <span class="match-status">
+                                    UPCOMING
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <div class="panel activity-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    〽
+                                </span>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View All →
+                            </a>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon blue">
+                                    👥
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        New team registered
+                                    </strong>
+
+                                    <small>
+                                        Sky Riders
+                                    </small>
+                                </div>
+
+                                <time>
+                                    2 hours ago
+                                </time>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon purple">
+                                    👤
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Player added
+                                    </strong>
+
+                                    <small>
+                                        New player registration
+                                    </small>
+                                </div>
+
+                                <time>
+                                    4 hours ago
+                                </time>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon violet">
+                                    📅
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Fixture updated
+                                    </strong>
+
+                                    <small>
+                                        Tournament schedule
+                                    </small>
+                                </div>
+
+                                <time>
+                                    6 hours ago
+                                </time>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon gold">
+                                    🏆
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        Match result added
+                                    </strong>
+
+                                    <small>
+                                        Result successfully recorded
+                                    </small>
+                                </div>
+
+                                <time>
+                                    Yesterday
+                                </time>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon pink">
+                                    🤝
+                                </div>
+
+                                <div>
+                                    <strong>
+                                        New sponsor added
+                                    </strong>
+
+                                    <small>
+                                        Sponsorship record updated
+                                    </small>
+                                </div>
+
+                                <time>
+                                    Yesterday
+                                </time>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     TOURNAMENT + QUICK ACTIONS + ANNOUNCEMENTS
+                ================================================== -->
+
+                <section class="lower-panels">
+
+
+                    <!-- TOURNAMENT PROGRESS -->
+
+                    <div class="panel tournament-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    🏆
+                                </span>
+
+                                <h3>
+                                    Tournament Progress
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View Details →
+                            </a>
+
+                        </div>
+
+
+                        <div class="tournament-name-large">
+                            Jeliakhali Mondal & Mondal Cricket Tournament
+                        </div>
+
+
+                        <div class="tournament-timeline">
+
+                            <div class="timeline-step completed">
+                                <span>✓</span>
+                                <small>Planning</small>
+                            </div>
+
+                            <div class="timeline-line completed-line"></div>
+
+                            <div class="timeline-step completed">
+                                <span>✓</span>
+                                <small>Team Registration</small>
+                            </div>
+
+                            <div class="timeline-line active-line"></div>
+
+                            <div class="timeline-step active">
+                                <span>3</span>
+                                <small>Fixtures</small>
+                            </div>
+
+                            <div class="timeline-line"></div>
+
+                            <div class="timeline-step">
+                                <span>4</span>
+                                <small>Matches</small>
+                            </div>
+
+                            <div class="timeline-line"></div>
+
+                            <div class="timeline-step">
+                                <span>5</span>
+                                <small>Final</small>
+                            </div>
+
+                        </div>
+
+
+                        <div class="tournament-info-row">
+
+                            <span>
+                                16 Teams
+                            </span>
+
+                            <span>
+                                15 Overs
+                            </span>
+
+                            <span>
+                                Knockout
+                            </span>
+
+                            <strong>
+                                Upcoming
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="panel quick-actions-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    ⚡
+                                </span>
+
+                                <h3>
+                                    Quick Actions
+                                </h3>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-actions-grid">
+
+
+                            <button type="button">
+                                <span>👥</span>
+                                <strong>Add Team</strong>
+                            </button>
+
+
+                            <button type="button">
+                                <span>👤</span>
+                                <strong>Add Player</strong>
+                            </button>
+
+
+                            <button type="button">
+                                <span>📅</span>
+                                <strong>Create Match</strong>
+                            </button>
+
+
+                            <button type="button">
+                                <span>🏆</span>
+                                <strong>Add Result</strong>
+                            </button>
+
+
+                            <button type="button">
+                                <span>👥</span>
+                                <strong>Manage Members</strong>
+                            </button>
+
+
+                            <button type="button">
+                                <span>📄</span>
+                                <strong>Generate Report</strong>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ANNOUNCEMENTS -->
+
+                    <div class="panel announcements-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    📢
+                                </span>
+
+                                <h3>
+                                    Announcements
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View All →
+                            </a>
+
+                        </div>
+
+
+                        <div class="announcement-item">
+
+                            <span class="announcement-dot red"></span>
+
+                            <div>
+
+                                <strong>
+                                    Mondal & Mondal Tournament
+                                </strong>
+
+                                <p>
+                                    Tournament preparation is in progress.
+                                </p>
+
+                                <small>
+                                    Today
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="announcement-item">
+
+                            <span class="announcement-dot blue"></span>
+
+                            <div>
+
+                                <strong>
+                                    Ground Maintenance
+                                </strong>
+
+                                <p>
+                                    VCAJ Ground maintenance notice.
+                                </p>
+
+                                <small>
+                                    Yesterday
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="announcement-item">
+
+                            <span class="announcement-dot gold"></span>
+
+                            <div>
+
+                                <strong>
+                                    Sponsorship Invitation
+                                </strong>
+
+                                <p>
+                                    Sponsorship activities are ongoing.
+                                </p>
+
+                                <small>
+                                    2 days ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     UPCOMING FIXTURES + TEAM REGISTRATION
+                ================================================== -->
+
+                <section class="bottom-panels">
+
+
+                    <!-- UPCOMING FIXTURES -->
+
+                    <div class="panel fixtures-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    📅
+                                </span>
+
+                                <h3>
+                                    Upcoming Fixtures
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View All →
+                            </a>
+
+                        </div>
+
+
+                        <div class="fixture-table">
+
+                            <div class="fixture-header">
+                                <span>Date</span>
+                                <span>Match</span>
+                                <span>Venue</span>
+                                <span>Time</span>
+                                <span>Status</span>
+                            </div>
+
+
+                            <div class="fixture-row">
+
+                                <span>
+                                    25 Dec 2026
+                                </span>
+
+                                <strong>
+                                    Team A vs Team B
+                                </strong>
+
+                                <span>
+                                    VCAJ Ground
+                                </span>
+
+                                <span>
+                                    03:00 PM
+                                </span>
+
+                                <em>
+                                    Upcoming
+                                </em>
+
+                            </div>
+
+
+                            <div class="fixture-row">
+
+                                <span>
+                                    26 Dec 2026
+                                </span>
+
+                                <strong>
+                                    Team C vs Team D
+                                </strong>
+
+                                <span>
+                                    VCAJ Ground
+                                </span>
+
+                                <span>
+                                    03:00 PM
+                                </span>
+
+                                <em>
+                                    Upcoming
+                                </em>
+
+                            </div>
+
+
+                            <div class="fixture-row">
+
+                                <span>
+                                    27 Dec 2026
+                                </span>
+
+                                <strong>
+                                    Team E vs Team F
+                                </strong>
+
+                                <span>
+                                    VCAJ Ground
+                                </span>
+
+                                <span>
+                                    03:00 PM
+                                </span>
+
+                                <em>
+                                    Upcoming
+                                </em>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TEAM REGISTRATION -->
+
+                    <div class="panel team-registration-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    👥
+                                </span>
+
+                                <h3>
+                                    Team Registration
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View Details →
+                            </a>
+
+                        </div>
+
+
+                        <div class="registration-content">
+
+                            <div class="registration-circle">
+
+                                <strong>
+                                    12
+                                </strong>
+
+                                <span>
+                                    Teams
+                                </span>
+
+                            </div>
+
+
+                            <div class="registration-legend">
+
+                                <div>
+                                    <span class="legend-dot confirmed"></span>
+                                    <span>Confirmed</span>
+                                    <strong>10</strong>
+                                </div>
+
+                                <div>
+                                    <span class="legend-dot pending"></span>
+                                    <span>Pending</span>
+                                    <strong>2</strong>
+                                </div>
+
+                                <div>
+                                    <span class="legend-dot total"></span>
+                                    <span>Total</span>
+                                    <strong>12</strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FINANCIAL OVERVIEW -->
+
+                    <div class="panel financial-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <span class="panel-title-icon">
+                                    ₹
+                                </span>
+
+                                <h3>
+                                    Financial Overview
+                                </h3>
+                            </div>
+
+                            <a href="#">
+                                View Details →
+                            </a>
+
+                        </div>
+
+
+                        <div class="financial-grid">
+
+
+                            <div class="financial-card income">
+
+                                <span>
+                                    ↑
+                                </span>
+
+                                <div>
+                                    <small>
+                                        Total Income
+                                    </small>
+
+                                    <strong>
+                                        ₹2,50,000
+                                    </strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="financial-card expense">
+
+                                <span>
+                                    ↓
+                                </span>
+
+                                <div>
+                                    <small>
+                                        Total Expenditure
+                                    </small>
+
+                                    <strong>
+                                        ₹1,25,000
+                                    </strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="financial-card balance">
+
+                                <span>
+                                    ₹
+                                </span>
+
+                                <div>
+                                    <small>
+                                        Cash in Hand
+                                    </small>
+
+                                    <strong>
+                                        ₹1,25,000
+                                    </strong>
+                                </div>
+
+                            </div>
+
+
+                            <div class="financial-card outstanding">
+
+                                <span>
+                                    ◷
+                                </span>
+
+                                <div>
+                                    <small>
+                                        Outstanding
+                                    </small>
+
+                                    <strong>
+                                        ₹30,000
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* ================================================
+           LIVE TIME & DATE
+        ================================================= */
+
+        function updateDateTime() {
+
+            const now = new Date();
+
+
+            const time = now.toLocaleTimeString(
+                "en-IN",
+                {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: true
+                }
+            );
+
+
+            const date = now.toLocaleDateString(
+                "en-IN",
+                {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                }
+            );
+
+
+            const day = now.toLocaleDateString(
+                "en-IN",
+                {
+                    weekday: "long"
+                }
+            );
+
+
+            document.getElementById("currentTime").textContent = time;
+
+            document.getElementById("currentDate").textContent = date;
+
+            document.getElementById("currentDay").textContent = day;
+        }
+
+
+        updateDateTime();
+
+        setInterval(updateDateTime, 1000);
+
+
+
+        /* ================================================
+           MOBILE SIDEBAR
+        ================================================= */
+
+        const menuButton =
+            document.getElementById("menuButton");
+
+        const sidebar =
+            document.querySelector(".sidebar");
+
+
+        if (menuButton && sidebar) {
+
+            menuButton.addEventListener(
+                "click",
+                function () {
+
+                    sidebar.classList.toggle("open");
+
+                }
+            );
+
+        }
+/* ================================================
+   ADMIN PROFILE DROPDOWN
+================================================ */
+
+const userProfile = document.getElementById("userProfile");
+const profileDropdown = document.getElementById("profileDropdown");
+const logoutButton = document.getElementById("logoutButton");
+
+if (userProfile && profileDropdown) {
+
+    userProfile.addEventListener("click", function (event) {
+        event.stopPropagation();
+        profileDropdown.classList.toggle("show");
+    });
+
+    document.addEventListener("click", function () {
+        profileDropdown.classList.remove("show");
+    });
+}
+
+if (logoutButton) {
+
+    logoutButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        window.location.href = "login.html";
+    });
+
+}
+    </script>
+
+</body>
+
+</html>

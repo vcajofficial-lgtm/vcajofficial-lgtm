@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Members | VCAJ Official</title>
+
+    <link rel="stylesheet" href="members.css">
+</head>
+
+<body>
+
+<div class="members-page">
+
+    <!-- TOP BAR -->
+    <header class="members-header">
+
+        <div>
+            <span class="page-label">VCAJ OFFICIAL</span>
+            <h1>Members</h1>
+            <p>VCAJ Membership Management</p>
+        </div>
+
+        <div class="header-actions">
+            <button class="secondary-btn" id="exportBtn">
+                Export
+            </button>
+
+            <button class="primary-btn" id="addMemberBtn">
+                + Add Member
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- SUMMARY -->
+    <section class="member-summary">
+
+        <div class="summary-card">
+            <span>Total Members</span>
+            <strong id="totalMembers">80+</strong>
+            <small>Registered members</small>
+        </div>
+
+        <div class="summary-card">
+            <span>Active Members</span>
+            <strong id="activeMembers">76</strong>
+            <small>Currently active</small>
+        </div>
+
+        <div class="summary-card">
+            <span>Pending</span>
+            <strong id="pendingMembers">3</strong>
+            <small>Awaiting approval</small>
+        </div>
+
+        <div class="summary-card">
+            <span>Inactive</span>
+            <strong id="inactiveMembers">1</strong>
+            <small>Inactive members</small>
+        </div>
+
+    </section>
+
+
+    <!-- MEMBERS PANEL -->
+    <section class="members-panel">
+
+        <!-- PANEL HEADER -->
+        <div class="panel-top">
+
+            <div>
+                <h2>All Members</h2>
+                <p>View and manage VCAJ members</p>
+            </div>
+
+
+            <!-- SEARCH & FILTERS -->
+            <div class="member-tools">
+
+                <!-- SEARCH -->
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="memberSearch"
+                        placeholder="Search name, ID, mobile or email..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- STATUS -->
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Active">
+                        Active
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Inactive">
+                        Inactive
+                    </option>
+
+                </select>
+
+
+                <!-- DEPARTMENT -->
+                <select id="departmentFilter">
+
+                    <option value="all">
+                        All Departments
+                    </option>
+
+                    <option value="Management">
+                        Management
+                    </option>
+
+                    <option value="Cricket">
+                        Cricket
+                    </option>
+
+                    <option value="Ground & Pitch Management">
+                        Ground & Pitch Management
+                    </option>
+
+                    <option value="Score Board">
+                        Score Board
+                    </option>
+
+                    <option value="Score Card">
+                        Score Card
+                    </option>
+
+                    <option value="Finance">
+                        Finance
+                    </option>
+
+                    <option value="Media & Promotion">
+                        Media & Promotion
+                    </option>
+
+                    <option value="Community Development">
+                        Community Development
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABLE -->
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>PHOTO</th>
+                        <th>MEMBER ID</th>
+                        <th>FULL NAME</th>
+                        <th>MOBILE NUMBER</th>
+                        <th>WHATSAPP</th>
+                        <th>EMAIL ID</th>
+                        <th>JOINING DATE</th>
+                        <th>DEPARTMENT</th>
+                        <th>RESPONSIBILITY</th>
+                        <th>MEMBER TYPE</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="membersTableBody">
+
+
+                    <!-- =================================================
+                         MEMBER 001
+                         ================================================= -->
+
+                    <tr
+                        data-status="Active"
+                        data-department="Management"
+                    >
+
+                        <td>
+                            <div class="member-photo">
+                                <span>SB</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong class="member-id">
+                                VCAJ-001
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                Sabyasachi Barui
+                            </strong>
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            sabyasachi@example.com
+                        </td>
+
+                        <td>
+                            15 Aug 2026
+                        </td>
+
+                        <td>
+                            Management
+                        </td>
+
+                        <td>
+                            Convenor
+                        </td>
+
+                        <td>
+                            Committee
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="view-btn">
+                                    View
+                                </button>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- =================================================
+                         MEMBER 002
+                         ================================================= -->
+
+                    <tr
+                        data-status="Active"
+                        data-department="Management"
+                    >
+
+                        <td>
+                            <div class="member-photo">
+                                <span>HB</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong class="member-id">
+                                VCAJ-002
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                Hillol Bera
+                            </strong>
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            hillol@example.com
+                        </td>
+
+                        <td>
+                            15 Aug 2026
+                        </td>
+
+                        <td>
+                            Management
+                        </td>
+
+                        <td>
+                            Joint President
+                        </td>
+
+                        <td>
+                            Committee
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="view-btn">
+                                    View
+                                </button>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- =================================================
+                         MEMBER 003
+                         ================================================= -->
+
+                    <tr
+                        data-status="Active"
+                        data-department="Cricket"
+                    >
+
+                        <td>
+                            <div class="member-photo">
+                                <span>AB</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong class="member-id">
+                                VCAJ-003
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                Abhijit Mondal
+                            </strong>
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            abhijit@example.com
+                        </td>
+
+                        <td>
+                            20 Aug 2026
+                        </td>
+
+                        <td>
+                            Cricket
+                        </td>
+
+                        <td>
+                            Score Board
+                        </td>
+
+                        <td>
+                            General
+                        </td>
+
+                        <td>
+                            <span class="status active">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="view-btn">
+                                    View
+                                </button>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+
+                    <!-- =================================================
+                         MEMBER 004
+                         ================================================= -->
+
+                    <tr
+                        data-status="Pending"
+                        data-department="Cricket"
+                    >
+
+                        <td>
+                            <div class="member-photo">
+                                <span>PM</span>
+                            </div>
+                        </td>
+
+                        <td>
+                            <strong class="member-id">
+                                VCAJ-004
+                            </strong>
+                        </td>
+
+                        <td>
+                            <strong>
+                                Partha Mondal
+                            </strong>
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            +91 XXXXX XXXXX
+                        </td>
+
+                        <td>
+                            partha@example.com
+                        </td>
+
+                        <td>
+                            22 Aug 2026
+                        </td>
+
+                        <td>
+                            Cricket
+                        </td>
+
+                        <td>
+                            Ground Management
+                        </td>
+
+                        <td>
+                            General
+                        </td>
+
+                        <td>
+                            <span class="status pending">
+                                Pending
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <div class="action-buttons">
+
+                                <button class="view-btn">
+                                    View
+                                </button>
+
+                                <button class="edit-btn">
+                                    Edit
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+            <!-- NO RESULTS -->
+            <div
+                id="noResults"
+                style="display: none; padding: 40px; text-align: center;"
+            >
+
+                <strong>
+                    No members found
+                </strong>
+
+                <p style="margin-top: 6px; color: #718096;">
+                    Try changing your search or filter.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script type="module" src="members.js"></script>
+
+</body>
+</html>

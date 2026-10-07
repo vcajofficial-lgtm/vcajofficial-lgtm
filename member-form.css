@@ -1,0 +1,383 @@
+/* =========================================================
+   VCAJ MEMBER FORM
+   Official Light Theme
+   ========================================================= */
+
+:root {
+    --navy: #17324d;
+    --blue: #2f6f9f;
+    --blue-light: #eef6fb;
+
+    --gold: #c9a227;
+
+    --white: #ffffff;
+    --bg: #f4f7fa;
+    --text: #243444;
+    --muted: #718096;
+
+    --border: #dfe7ee;
+
+    --shadow: 0 8px 25px rgba(23, 50, 77, 0.07);
+}
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+
+/* PAGE */
+
+.member-form-page {
+    min-height: 100vh;
+    padding: 34px 38px 50px;
+}
+
+
+/* HEADER */
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 28px;
+}
+
+.page-label {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.form-header h1 {
+    color: var(--navy);
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.form-header p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+
+/* BACK BUTTON */
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 17px;
+
+    background: var(--white);
+    color: var(--navy);
+
+    border: 1px solid var(--border);
+    border-radius: 9px;
+
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+
+/* FORM */
+
+.member-form {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* CARD */
+
+.form-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 26px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+
+/* CARD HEADING */
+
+.card-heading {
+    margin-bottom: 22px;
+}
+
+.card-heading h2 {
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.card-heading p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* PHOTO */
+
+.photo-upload-area {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.photo-preview {
+    width: 105px;
+    height: 105px;
+
+    border-radius: 50%;
+
+    background: #eef3f7;
+    border: 2px dashed #cbd7e1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.photo-upload-content p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.photo-upload-content small {
+    display: block;
+    margin-top: 4px;
+    color: #9aa7b4;
+    font-size: 10px;
+}
+
+
+/* UPLOAD BUTTON */
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 40px;
+    padding: 0 17px;
+
+    background: var(--blue-light);
+    color: var(--blue);
+
+    border: 1px solid #d4e5f0;
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.upload-btn:hover {
+    background: #e2f0f8;
+    border-color: var(--blue);
+}
+
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* FORM GROUP */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: #c24141;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 43px;
+
+    padding: 0 13px;
+
+    background: var(--white);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    outline: none;
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(47, 111, 159, 0.08);
+}
+
+.form-group input[readonly] {
+    background: #f5f7f9;
+    color: var(--blue);
+    font-weight: 750;
+}
+
+.form-group input::placeholder {
+    color: #9aa7b4;
+}
+
+.form-group small {
+    color: #9aa7b4;
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+
+/* ACTIONS */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 5px;
+}
+
+.cancel-btn,
+.save-btn {
+    min-height: 44px;
+    padding: 0 22px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.cancel-btn {
+    background: var(--white);
+    color: var(--navy);
+    border: 1px solid var(--border);
+}
+
+.cancel-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.save-btn {
+    border: none;
+    background: var(--navy);
+    color: var(--white);
+
+    box-shadow: 0 5px 14px rgba(23, 50, 77, 0.15);
+}
+
+.save-btn:hover {
+    background: var(--blue);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .member-form-page {
+        padding: 22px 15px 35px;
+    }
+
+    .form-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-header h1 {
+        font-size: 28px;
+    }
+
+    .back-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-card {
+        padding: 20px 17px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .photo-upload-area {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        width: 100%;
+    }
+}

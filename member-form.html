@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="pageTitle">Add Member | VCAJ Official</title>
+
+    <link rel="stylesheet" href="member-form.css">
+</head>
+
+<body>
+
+<div class="member-form-page">
+
+    <!-- HEADER -->
+    <header class="form-header">
+
+        <div>
+            <span class="page-label">VCAJ OFFICIAL</span>
+
+            <h1 id="formTitle">Add Member</h1>
+
+            <p id="formSubtitle">
+                Create a new VCAJ member record
+            </p>
+        </div>
+
+        <a href="members.html" class="back-btn">
+            ← Back to Members
+        </a>
+
+    </header>
+
+
+    <!-- FORM -->
+    <form class="member-form" id="memberForm">
+
+
+        <!-- MEMBER PHOTO -->
+        <section class="form-card photo-card">
+
+            <div class="card-heading">
+
+                <h2>Member Photo</h2>
+
+                <p>
+                    Upload a clear profile photograph
+                </p>
+
+            </div>
+
+
+            <div class="photo-upload-area">
+
+                <div class="photo-preview" id="photoPreview">
+                    <span>PHOTO</span>
+                </div>
+
+
+                <div class="photo-upload-content">
+
+                    <label
+                        for="memberPhoto"
+                        class="upload-btn"
+                    >
+                        Upload Photo
+                    </label>
+
+                    <input
+                        type="file"
+                        id="memberPhoto"
+                        accept="image/*"
+                        hidden
+                    >
+
+                    <p>
+                        JPG, PNG or WEBP
+                    </p>
+
+                    <small>
+                        Recommended: square photograph
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BASIC INFORMATION -->
+        <section class="form-card">
+
+            <div class="card-heading">
+
+                <h2>Basic Information</h2>
+
+                <p>
+                    Member identification and contact details
+                </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <!-- MEMBER ID -->
+                <div class="form-group">
+
+                    <label>
+                        Member ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="memberId"
+                        readonly
+                    >
+
+                    <small id="memberIdHelp">
+                        Automatically generated
+                    </small>
+
+                </div>
+
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label>
+                        Full Name <span>*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- MOBILE -->
+                <div class="form-group">
+
+                    <label>
+                        Mobile Number <span>*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="mobileNumber"
+                        placeholder="+91 XXXXX XXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+                <div class="form-group">
+
+                    <label>
+                        WhatsApp Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="whatsappNumber"
+                        placeholder="+91 XXXXX XXXXX"
+                    >
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label>
+                        Email ID
+                    </label>
+
+                    <input
+                        type="email"
+                        id="emailId"
+                        placeholder="member@example.com"
+                    >
+
+                </div>
+
+
+                <!-- JOINING DATE -->
+                <div class="form-group">
+
+                    <label>
+                        Joining Date <span>*</span>
+                    </label>
+
+                    <input
+                        type="date"
+                        id="joiningDate"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MEMBERSHIP INFORMATION -->
+        <section class="form-card">
+
+            <div class="card-heading">
+
+                <h2>Membership Information</h2>
+
+                <p>
+                    Role and membership details
+                </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <!-- DEPARTMENT -->
+                <div class="form-group">
+
+                    <label>
+                        Department <span>*</span>
+                    </label>
+
+                    <select
+                        id="department"
+                        required
+                    >
+
+                        <option value="">
+                            Select Department
+                        </option>
+
+                        <option value="Management">
+                            Management
+                        </option>
+
+                        <option value="Cricket">
+                            Cricket
+                        </option>
+
+                        <option value="Ground & Pitch Management">
+                            Ground & Pitch Management
+                        </option>
+
+                        <option value="Score Board">
+                            Score Board
+                        </option>
+
+                        <option value="Score Card">
+                            Score Card
+                        </option>
+
+                        <option value="Finance">
+                            Finance
+                        </option>
+
+                        <option value="Media & Promotion">
+                            Media & Promotion
+                        </option>
+
+                        <option value="Community Development">
+                            Community Development
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- RESPONSIBILITY -->
+                <div class="form-group">
+
+                    <label>
+                        Responsibility <span>*</span>
+                    </label>
+
+                    <select
+                        id="responsibility"
+                        required
+                    >
+
+                        <option value="">
+                            Select Responsibility
+                        </option>
+
+                        <option value="Convenor">
+                            Convenor
+                        </option>
+
+                        <option value="President">
+                            President
+                        </option>
+
+                        <option value="Vice President">
+                            Vice President
+                        </option>
+
+                        <option value="Editor">
+                            Editor
+                        </option>
+
+                        <option value="Assistant Editor">
+                            Assistant Editor
+                        </option>
+
+                        <option value="Treasurer">
+                            Treasurer
+                        </option>
+
+                        <option value="Auditor">
+                            Auditor
+                        </option>
+
+                        <option value="Ground & Pitch Management">
+                            Ground & Pitch Management
+                        </option>
+
+                        <option value="Score Board">
+                            Score Board
+                        </option>
+
+                        <option value="Score Card">
+                            Score Card
+                        </option>
+
+                        <option value="Member">
+                            Member
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- MEMBER TYPE -->
+                <div class="form-group">
+
+                    <label>
+                        Member Type <span>*</span>
+                    </label>
+
+                    <select
+                        id="memberType"
+                        required
+                    >
+
+                        <option value="">
+                            Select Member Type
+                        </option>
+
+                        <option value="General">
+                            General
+                        </option>
+
+                        <option value="Committee">
+                            Committee
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- STATUS -->
+                <div class="form-group">
+
+                    <label>
+                        Status <span>*</span>
+                    </label>
+
+                    <select
+                        id="status"
+                        required
+                    >
+
+                        <option value="">
+                            Select Status
+                        </option>
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                        <option value="Pending">
+                            Pending
+                        </option>
+
+                        <option value="Inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ACTIONS -->
+        <div class="form-actions">
+
+            <a
+                href="members.html"
+                class="cancel-btn"
+            >
+                Cancel
+            </a>
+
+            <button
+                type="submit"
+                class="save-btn"
+                id="saveButton"
+            >
+                Save Member
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+<!-- MEMBER FORM JAVASCRIPT -->
+<script type="module" src="member-form.js"></script>
+
+</body>
+</html>

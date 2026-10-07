@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Member Profile | VCAJ</title>
+
+    <link
+        rel="stylesheet"
+        href="member-profile.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="profile-page">
+
+
+    <!-- HEADER -->
+
+    <header class="profile-header">
+
+        <div>
+
+            <span class="page-label">
+                VCAJ OFFICIAL
+            </span>
+
+            <h1>
+                Member Profile
+            </h1>
+
+            <p>
+                View complete VCAJ member information
+            </p>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <a
+                href="members.html"
+                class="back-btn"
+            >
+                ← Back to Members
+            </a>
+
+            <button
+                id="editButton"
+                class="edit-top-btn"
+            >
+                ✎ Edit Member
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- LOADING -->
+
+    <div
+        id="loading"
+        class="loading-box"
+    >
+
+        Loading member profile...
+
+    </div>
+
+
+
+    <!-- ERROR -->
+
+    <div
+        id="errorBox"
+        class="error-box"
+        style="display:none;"
+    >
+
+        Member could not be loaded.
+
+    </div>
+
+
+
+    <!-- PROFILE -->
+
+    <main
+        id="profileContent"
+        style="display:none;"
+    >
+
+
+        <!-- PROFILE HERO -->
+
+        <section class="profile-hero">
+
+
+            <div
+                class="large-photo"
+                id="profilePhoto"
+            >
+
+                <span id="profileInitials">
+                    --
+                </span>
+
+            </div>
+
+
+            <div class="profile-main-info">
+
+                <h2 id="fullName">
+                    —
+                </h2>
+
+                <div
+                    class="member-id"
+                    id="memberId"
+                >
+                    —
+                </div>
+
+
+                <div class="profile-badges">
+
+                    <span
+                        class="status-badge"
+                        id="statusBadge"
+                    >
+                        —
+                    </span>
+
+                    <span
+                        class="type-badge"
+                        id="memberTypeBadge"
+                    >
+                        —
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PERSONAL INFORMATION -->
+
+        <section class="profile-card">
+
+            <div class="section-title">
+
+                <h3>
+                    Personal Information
+                </h3>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <div class="info-item">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong id="infoFullName">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Member ID
+                    </span>
+
+                    <strong id="infoMemberId">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="infoEmail">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Mobile
+                    </span>
+
+                    <strong id="infoMobile">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        WhatsApp
+                    </span>
+
+                    <strong id="infoWhatsapp">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Joining Date
+                    </span>
+
+                    <strong id="infoJoiningDate">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="info-item full-width"
+                >
+
+                    <span>
+                        Address
+                    </span>
+
+                    <strong id="infoAddress">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MEMBERSHIP INFORMATION -->
+
+        <section class="profile-card">
+
+            <div class="section-title">
+
+                <h3>
+                    Membership Information
+                </h3>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <div class="info-item">
+
+                    <span>
+                        Member Type
+                    </span>
+
+                    <strong id="infoMemberType">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Status
+                    </span>
+
+                    <strong id="infoStatus">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Department
+                    </span>
+
+                    <strong id="infoDepartment">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Responsibility
+                    </span>
+
+                    <strong id="infoResponsibility">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OTHER INFORMATION -->
+
+        <section class="profile-card">
+
+            <div class="section-title">
+
+                <h3>
+                    Other Information
+                </h3>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <div class="info-item">
+
+                    <span>
+                        Emergency Contact
+                    </span>
+
+                    <strong id="infoEmergency">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Photo
+                    </span>
+
+                    <strong id="infoPhotoStatus">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="info-item full-width"
+                >
+
+                    <span>
+                        Remarks
+                    </span>
+
+                    <strong id="infoRemarks">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BOTTOM ACTION -->
+
+        <div class="bottom-actions">
+
+            <a
+                href="members.html"
+                class="secondary-btn"
+            >
+                ← Back to Members
+            </a>
+
+            <button
+                id="editBottomButton"
+                class="primary-btn"
+            >
+                ✎ Edit Member
+            </button>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="member-profile.js"
+></script>
+
+</body>
+
+</html>

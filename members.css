@@ -1,0 +1,538 @@
+/* =========================================================
+   VCAJ MEMBERS MODULE
+   Official Light Theme
+   ========================================================= */
+
+:root {
+    --navy: #17324d;
+    --navy-dark: #10263b;
+    --blue: #2f6f9f;
+    --blue-light: #eef6fb;
+
+    --gold: #c9a227;
+    --gold-light: #f8f2dc;
+
+    --white: #ffffff;
+    --bg: #f4f7fa;
+    --text: #243444;
+    --muted: #718096;
+
+    --border: #e1e8ef;
+
+    --green: #23845b;
+    --green-light: #e9f7f0;
+
+    --orange: #b7791f;
+    --orange-light: #fff7e6;
+
+    --red: #c24141;
+    --red-light: #fdeeee;
+
+    --shadow: 0 8px 25px rgba(23, 50, 77, 0.07);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.members-page {
+    min-height: 100vh;
+    padding: 34px 38px 50px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.members-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.page-label {
+    display: inline-block;
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+}
+
+.members-header h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    color: var(--navy);
+    font-weight: 750;
+}
+
+.members-header p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HEADER BUTTONS
+   ========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-btn,
+.secondary-btn {
+    border: none;
+    min-height: 42px;
+    padding: 0 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.primary-btn {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 5px 14px rgba(23, 50, 77, 0.15);
+}
+
+.primary-btn:hover {
+    background: var(--blue);
+    transform: translateY(-1px);
+}
+
+.secondary-btn {
+    background: var(--white);
+    color: var(--navy);
+    border: 1px solid var(--border);
+}
+
+.secondary-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.member-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 21px 22px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.summary-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gold);
+}
+
+.summary-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.summary-card strong {
+    display: block;
+    color: var(--navy);
+    font-size: 29px;
+    line-height: 1;
+}
+
+.summary-card small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   MAIN MEMBERS PANEL
+   ========================================================= */
+
+.members-panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PANEL TOP
+   ========================================================= */
+
+.panel-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 25px;
+    border-bottom: 1px solid var(--border);
+}
+
+.panel-top h2 {
+    color: var(--navy);
+    font-size: 20px;
+    font-weight: 750;
+}
+
+.panel-top p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   SEARCH + FILTER
+   ========================================================= */
+
+.member-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    height: 40px;
+    min-width: 235px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.search-box span {
+    color: var(--muted);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+}
+
+.search-box input::placeholder {
+    color: #9aa7b4;
+}
+
+.member-tools select {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--text);
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.member-tools select:focus,
+.search-box:focus-within {
+    border-color: var(--blue);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 1500px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    padding: 14px 15px;
+    text-align: left;
+    color: #68798a;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 14px 15px;
+    color: #526273;
+    font-size: 12px;
+    white-space: nowrap;
+    border-bottom: 1px solid #edf1f5;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background 0.18s ease;
+}
+
+tbody tr:hover {
+    background: #f9fbfd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td strong {
+    color: var(--text);
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   MEMBER PHOTO
+   ========================================================= */
+
+.member-photo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e7f0f7, #d5e3ef);
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 7px rgba(23, 50, 77, 0.12);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.member-photo span {
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   MEMBER ID
+   ========================================================= */
+
+.member-id {
+    color: var(--blue) !important;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 66px;
+    padding: 5px 10px;
+
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.status.active {
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.status.pending {
+    background: var(--orange-light);
+    color: var(--orange);
+}
+
+.status.inactive {
+    background: var(--red-light);
+    color: var(--red);
+}
+
+
+/* =========================================================
+   VIEW BUTTON
+   ========================================================= */
+
+.view-btn {
+    border: 1px solid #d7e2eb;
+    background: var(--white);
+    color: var(--blue);
+
+    padding: 7px 13px;
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 750;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.view-btn:hover {
+    background: var(--blue-light);
+    border-color: var(--blue);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .members-page {
+        padding: 28px 25px 40px;
+    }
+
+    .member-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .panel-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .member-tools {
+        width: 100%;
+    }
+
+    .search-box {
+        flex: 1;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .members-page {
+        padding: 22px 15px 35px;
+    }
+
+    .members-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .members-header h1 {
+        font-size: 28px;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        flex: 1;
+    }
+
+    .member-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .summary-card {
+        padding: 18px;
+    }
+
+    .panel-top {
+        padding: 20px 17px;
+    }
+
+    .member-tools {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .member-tools select {
+        width: 100%;
+    }
+
+    table {
+        min-width: 1500px;
+    }
+}

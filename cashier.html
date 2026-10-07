@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accounts Department | VCAJ</title>
+
+    <link rel="stylesheet" href="cashier.css">
+
+    <style>
+        /* =================================================
+           VCAJ ACCOUNTS DEPARTMENT
+           CLEAN / PROFESSIONAL / RECTANGULAR DESIGN
+        ================================================= */
+
+        :root {
+            --vcaj-blue: #0b4f87;
+            --vcaj-blue-dark: #073b66;
+            --vcaj-gold: #e9b52d;
+            --page-bg: #f4f7fa;
+            --border: #dce3e9;
+            --text-dark: #1d2d3d;
+            --text-light: #66727d;
+        }
+
+        .accounts-main {
+            background: var(--page-bg);
+        }
+
+        .accounts-topbar {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .accounts-topbar h1 {
+            color: var(--text-dark);
+        }
+
+        .accounts-topbar p {
+            color: var(--text-light);
+        }
+
+        .accounts-content {
+            padding: 28px 32px 40px;
+        }
+
+        /* ================================================
+           PAGE HEADER
+        ================================================ */
+
+        .department-header {
+            background: var(--vcaj-blue);
+            border-left: 6px solid var(--vcaj-gold);
+
+            padding: 24px 28px;
+            margin-bottom: 30px;
+
+            border-radius: 6px;
+            color: #ffffff;
+        }
+
+        .department-header h2 {
+            margin: 0 0 6px;
+
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .department-header p {
+            margin: 0;
+
+            font-size: 14px;
+            color: #e5edf5;
+        }
+
+
+        /* ================================================
+           SECTION TITLE
+        ================================================ */
+
+        .account-section-title {
+            margin-bottom: 16px;
+        }
+
+        .account-section-title h3 {
+            margin: 0;
+
+            font-size: 20px;
+            color: var(--text-dark);
+            font-weight: 800;
+        }
+
+        .account-section-title p {
+            margin: 5px 0 0;
+
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+
+        /* ================================================
+           THREE ACCOUNT CARDS
+        ================================================ */
+
+        .account-choice-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 20px;
+
+            margin-bottom: 34px;
+        }
+
+
+        .account-choice-card {
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--vcaj-blue);
+
+            border-radius: 7px;
+
+            padding: 24px;
+
+            min-height: 390px;
+
+            display: flex;
+            flex-direction: column;
+
+            box-shadow: 0 3px 10px rgba(20, 40, 60, 0.06);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+
+        .account-choice-card:hover {
+            transform: translateY(-3px);
+
+            border-color: #bfcbd5;
+
+            box-shadow:
+                0 8px 22px rgba(20, 40, 60, 0.10);
+        }
+
+
+        /* ================================================
+           CARD ICON
+        ================================================ */
+
+        .choice-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #eef4f8;
+
+            border: 1px solid #d9e4ec;
+
+            border-radius: 6px;
+
+            font-size: 23px;
+
+            margin-bottom: 17px;
+        }
+
+
+        /* ================================================
+           CARD CONTENT
+        ================================================ */
+
+        .account-choice-card h4 {
+            margin: 0 0 9px;
+
+            color: var(--text-dark);
+
+            font-size: 18px;
+            line-height: 1.35;
+            font-weight: 800;
+        }
+
+        .account-choice-card p {
+            margin: 0 0 15px;
+
+            color: var(--text-light);
+
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+
+        .choice-list {
+            margin: 0 0 22px;
+
+            padding-left: 18px;
+
+            color: #4e5c67;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .choice-list li::marker {
+            color: var(--vcaj-blue);
+        }
+
+
+        /* ================================================
+           BUTTON
+        ================================================ */
+
+        .open-account-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-top: auto;
+
+            min-height: 42px;
+
+            padding: 0 18px;
+
+            background: var(--vcaj-blue);
+
+            color: #ffffff;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            border: 1px solid var(--vcaj-blue);
+
+            transition: 0.2s ease;
+        }
+
+
+        .open-account-button:hover {
+            background: var(--vcaj-blue-dark);
+
+            border-color: var(--vcaj-blue-dark);
+        }
+
+
+        /* ================================================
+           TOURNAMENT LABEL
+        ================================================ */
+
+        .tournament-status {
+            display: inline-block;
+
+            align-self: flex-start;
+
+            margin-bottom: 14px;
+
+            padding: 5px 9px;
+
+            background: #fff7df;
+
+            color: #8a6500;
+
+            border: 1px solid #f0d98b;
+
+            border-radius: 4px;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 0.4px;
+        }
+
+
+        /* ================================================
+           FUTURE NOTE
+        ================================================ */
+
+        .future-note {
+            padding: 16px 18px;
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-left: 4px solid var(--vcaj-gold);
+
+            border-radius: 5px;
+
+            color: var(--text-light);
+
+            font-size: 13px;
+        }
+
+        .future-note strong {
+            color: var(--text-dark);
+        }
+
+
+        /* ================================================
+           RESPONSIVE
+        ================================================ */
+
+        @media (max-width: 1100px) {
+
+            .account-choice-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            .account-choice-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accounts-content {
+                padding: 20px;
+            }
+
+            .department-header {
+                padding: 20px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="accounts-layout">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================= -->
+
+    <aside class="accounts-sidebar">
+
+        <div class="sidebar-brand">
+
+            <a href="dashboard.html">
+                <img
+                    src="assets/logo/images/VCAJ.png"
+                    alt="VCAJ Logo"
+                >
+            </a>
+
+            <div>
+                <strong>VCAJ Accounts</strong>
+                <span>Department</span>
+            </div>
+
+        </div>
+
+
+        <nav class="accounts-nav">
+
+            <a href="dashboard.html">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="cashier.html" class="active">
+                <span>▤</span>
+                Accounts
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN
+    ================================================= -->
+
+    <main class="accounts-main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="accounts-topbar">
+
+            <div>
+
+                <h1>
+                    Accounts Department
+                </h1>
+
+                <p>
+                    VCAJ Club Financial Management
+                </p>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- CONTENT -->
+
+        <div class="accounts-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="department-header">
+
+                <h2>
+                    VCAJ CLUB
+                </h2>
+
+                <p>
+                    Simple, transparent and organised financial
+                    management for the club and its tournaments.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================================
+                 CLUB ACCOUNT
+            ========================================= -->
+
+            <div class="account-section-title">
+
+                <h3>
+                    Club & Tournament Accounts
+                </h3>
+
+                <p>
+                    Select an account to manage financial records,
+                    transactions and audit information.
+                </p>
+
+            </div>
+
+
+            <!-- =========================================
+                 THREE CARDS
+            ========================================= -->
+
+            <div class="account-choice-grid">
+
+
+                <!-- VCAJ CLUB -->
+
+                <div class="account-choice-card">
+
+                    <div class="choice-icon">
+                        🏛️
+                    </div>
+
+                    <h4>
+                        VCAJ Club Accounts
+                    </h4>
+
+                    <p>
+                        Main financial account of VCAJ Club,
+                        separate from tournament accounts.
+                    </p>
+
+                    <ul class="choice-list">
+
+                        <li>
+                            Membership Payments
+                        </li>
+
+                        <li>
+                            Donations & Sponsorships
+                        </li>
+
+                        <li>
+                            Club Expenses
+                        </li>
+
+                        <li>
+                            Assets & Liabilities
+                        </li>
+
+                        <li>
+                            Club Audit
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="#"
+                        class="open-account-button"
+                    >
+                        Open Club Accounts →
+                    </a>
+
+                </div>
+
+
+
+                <!-- VCAJ OWN TOURNAMENT -->
+
+                <div class="account-choice-card">
+
+                    <span class="tournament-status">
+                        VCAJ OWN TOURNAMENT
+                    </span>
+
+                    <div class="choice-icon">
+                        🏏
+                    </div>
+
+                    <h4>
+                        VCAJ Own Tournament
+                    </h4>
+
+                    <p>
+                        Financial management for tournaments
+                        organised directly by VCAJ.
+                    </p>
+
+                    <ul class="choice-list">
+
+                        <li>
+                            Team Entry Fees
+                        </li>
+
+                        <li>
+                            Sponsorship & Advertisement
+                        </li>
+
+                        <li>
+                            Prize & Tournament Expenses
+                        </li>
+
+                        <li>
+                            Security Deposits
+                        </li>
+
+                        <li>
+                            Tournament Audit
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="#"
+                        class="open-account-button"
+                    >
+                        Open Accounts →
+                    </a>
+
+                </div>
+
+
+
+                <!-- MONDAL & MONDAL -->
+
+                <div class="account-choice-card">
+
+                    <span class="tournament-status">
+                        2026 TOURNAMENT
+                    </span>
+
+                    <div class="choice-icon">
+                        🏆
+                    </div>
+
+                    <h4>
+                        Jeliakhali Mondal & Mondal
+                        Cricket Tournament 2026
+                    </h4>
+
+                    <p>
+                        25 December 2026 – 30 December 2026
+                    </p>
+
+                    <ul class="choice-list">
+
+                        <li>
+                            16 Teams
+                        </li>
+
+                        <li>
+                            15 Overs
+                        </li>
+
+                        <li>
+                            Knockout Format
+                        </li>
+
+                        <li>
+                            Accounts Management
+                        </li>
+
+                        <li>
+                            Tournament Audit
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="mondal-mondal-accounts.html"
+                        class="open-account-button"
+                    >
+                        Open Accounts →
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- FUTURE -->
+
+            <div class="future-note">
+
+                <strong>Future Expansion:</strong>
+
+                New VCAJ tournaments can be added here without
+                changing the main VCAJ Club accounting system.
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
